@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circles</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=mjlPRco0y0WR92zH88l36o9aLbD3gTRyjmBDXBXj1gudaSBZ1p8VP4jYpRepKsofglq6svBOD8xURfeKfKsHqUeRkBtEUJY6IlNfzefR8OyAnfeOdCKFPIRd0E9U2Lf7yBR0ryAEZOII4k1lBcVnevbm87ou_kED18n2RAEJG4LS_vFH76vefETeub7Y2m6h1l1uIxd2sGtr4Y3B5TboMBwz-lrTSjYmsyqzWwATJrZdqzmIoYzWvScPEnkNAA-4JmbySA5LQ_Gm7ryNHYyUUIoEeKsj2cvQgSINtXFSpuU8W5KIRhdbk_6-oIDOrxFVrp6DYB3-Ri6DZvXMQqv7NgEHTjoLZxuZrGUpyG_2fnTttFCj5PgK-NxhVWKRJb8Uke62ttcIcGxVgjYdWklQVhmOm2zXjGbDU0I3GqTQ5ds1UyclPs78i_HIqoGL4RemBScaKYYzlMwSCjQcP_QCJl359uYtX4yTxIW3IFP-ux8zw0EG0-uMEUjchyl8PRChkHqMaEdc-bMnboxliedcA3WWBjvOMa71kizPLn7ZsMuAL3Dk0VgD3eDv2QVdoKlyVH_san94_vD7sBgWmRaGUGNNbYhwp81sFWtwhQvhgTXAL4M_b1ZQAH792_b1nL7V3sMHNKS6sm_nnm08NbBGJa9ddsFH28mP9jR6WErMXvLSG2r2bmq0CKxzfzT1E23cKIjPH-y6_ATmZ4F17DS9gKkZyDu0SQL_k_ENEGoiGXDbIDBLZp9sz1_MP69NeyGxMsUGpeBs9bo4sjRM4ymSnfg4j2cLoCqG6nrhVhr-PJWVdaqJZIPtHb3p3ryNxISALejuMhCWJ93PCkkp2RJFcEgBzqP30ii8z8oygMH5-kzozRPjRnQrJfGTe0A2JYiL0tr_hGZs3_DRYTC_s4l81HYi2uZ0qVbd6d2pd_sDkF-KfWWiCxk0GKa72j_5gWA285npYq37kXBS01E-Yiv_82xSaeebks_V7KUK-baeVPtQ7UtgYds6iYD_eqS_ueXdWMzEmUXNJH083YCRp6ARpTiNwT30lNMEX5T1gPrE6LgL8cvqt1lm89oGALhkykW8swnvI5ejR3Wzz4TY_dmLZPofeCAniWjpAi2V1KhRkocxhEZYvK-tmWcvkGUCcbFXAhioDK95vE9ktPvcg51fOkxYYpeSGYHz5Hl64wkJDCnNyUDClImWArgrDFRvqQVI8-AuOB2UiJbNmhvmzbPAqA" nonce="30d60c8f1c3906ca5ae694915e824f9b" charset="UTF-8"></script><style>
+      @keyframes move-1 {
+        0% {
+          width: 50px;
+        }
+
+        50% {
+          width: 170px;
+        }
+
+        100% {
+          width: 50px;
+        }
+      }
+
+      .move::before {
+        animation: move-1 3s infinite;
+      }
+
+      .circles {
+        width: 180px;
+        height: 200px;  
+        margin: 150px auto;
+        position: relative;
+      }
+
+      .circle-1, .circle-2, .circle-3, .circle-4 {
+        display: block;
+        width: 50px;
+        height: 50px;
+        
+        position: absolute;
+      }
+
+      .circle-1:before, .circle-2:before, .circle-3:before, .circle-4:before {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        position: absolute;
+        content: '';
+        right: 0;
+      }
+
+      .circles .circle-1{
+        top: 0;
+        left: 0;
+        transform: rotate(180deg);
+      }
+
+      .circles .circle-1:before{
+        background-color: rgb(255, 0, 0);
+      }
+
+      .circles .circle-2 {
+        top: 0;
+        right: 0;
+        transform: rotate(-90deg);
+      }
+
+      .circles .circle-2:before{
+        background-color: rgb(255, 165, 0);
+      }
+
+      .circles .circle-3 {
+        bottom: 0;
+        right: 0;
+        transform: rotate(0deg);
+      }
+
+      .circles .circle-3:before{
+        background-color: rgb(0, 0, 255);
+      }
+
+      .circles .circle-4 {
+        bottom: 0;
+        left: 0;  
+        transform: rotate(90deg);
+      }
+
+      .circles .circle-4:before{
+        background-color: rgb(0, 164, 82);
+      }
+
+      button {
+        background-color: #4CAF50;
+        padding: 6px 14px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px;
+        color: #fff;
+      }
+
+      .actionButtons {
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+      }
+      
+    </style>
+</head>
+<body>
+  <div>
+    <div class="circles">
+      <p class="circle circle-1"></p>
+      <p class="circle circle-2"></p>
+      <p class="circle circle-3"></p>
+      <p class="circle circle-4"></p>
+    </div>
+    <div class="actionButtons">
+      <button onclick="movefunction()" class="start">start</button>
+      <button onclick="removeClass()" class="stop">stop</button>
+    </div>
+  </div>
+</body>
+<script>
+
+  function classCheck(className, action){
+    var cicleClass = document.getElementsByClassName(className);
+    if(action == "add"){
+      cicleClass[0].classList.add('move');
+    } else {
+      cicleClass[0].classList.remove('move');    
+    }
+  }
+
+  function movefunction() {
+    classCheck('circle-1', "add");
+    classCheck('circle-2', "add");
+    classCheck('circle-3', "add");
+    classCheck('circle-4', "add");
+  }
+
+  function removeClass() {
+    classCheck('circle-1', "remove");
+    classCheck('circle-2', "remove");
+    classCheck('circle-3', "remove");
+    classCheck('circle-4', "remove");
+  }
+</script>
+</html>
